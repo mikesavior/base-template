@@ -2,13 +2,13 @@
 <!-- CATEGORY FILTER RESULTS ex: http://base-template.squarespace.com/blog/?category=category1 -->
 
 {.section categoryFilter}
-  <p>Filtering by Category: {@}</p>
+  <p>Filtering by Category: {@|safe}</p>
 {.end}
 
 <!-- TAG FILTER RESULTS ex: http://base-template.squarespace.com/blog/?tag=tag2 -->
 
 {.section tagFilter}
-  <p>Filtering by Tag: {@}</p>
+  <p>Filtering by Tag: {@|safe}</p>
 {.end}
 
 <!-- AUTHOR FILTER RESULTS ex: http://www.base-template.com/blog?author=4f046df4d09ae2cf23d1aaa2 -->

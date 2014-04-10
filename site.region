@@ -9,38 +9,42 @@
   </head>
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
 
-    <header id="header" class="header">
-      <!--Site title or logo.-->
-      {.section website}
+    <div class="container">
 
-        <h1 class="site-title" data-content-field="site-title">
-          <a href="/">
-            {.section logoImageUrl}
-             <img class="logo" src="{logoImageUrl}?format=original" alt="{siteTitle}" />
-            {.or}
-              {siteTitle}
-            {.end}
-          </a>
-        </h1>
-        
-        <!--Site tagline.-->
-        {.section siteTagLine}<p>{@}</p>{.end}
+      <header id="header" class="header">
+        <!--Site title or logo.-->
+        {.section website}
 
-      {.end}
+          <h1 class="site-title" data-content-field="site-title">
+            <a href="/">
+              {.section logoImageUrl}
+               <img class="logo" src="{logoImageUrl}?format=original" alt="{siteTitle}" />
+              {.or}
+                {siteTitle}
+              {.end}
+            </a>
+          </h1>
+          
+          <!--Site tagline.-->
+          {.section siteTagLine}<p>{@}</p>{.end}
 
-      <!--Main navigation.-->
-      <squarespace:navigation navigationId="mainNav" template="navigation" />
-    </header>
+        {.end}
 
-    <!--Content injection point.-->
-    <section id="content" class="content">
-     {squarespace.main-content}
-    </section>
+        <!--Main navigation.-->
+        <squarespace:navigation navigationId="mainNav" template="navigation" />
+      </header>
 
-    <!--Footer with open block field.-->
-    <footer id="footer" class="footer">
-      <squarespace:block-field id="footerBlocks" columns="12" />
-    </footer>
+      <!--Content injection point.-->
+      <section id="content" class="content">
+       {squarespace.main-content}
+      </section>
+
+      <!--Footer with open block field.-->
+      <footer id="footer" class="footer">
+        <squarespace:block-field id="footerBlocks" columns="12" />
+      </footer>
+
+    </div>
 
     <!--Set combo to false when debugging.-->
     <squarespace:script src="site.js" combo="true" />

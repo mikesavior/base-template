@@ -1,9 +1,8 @@
-
 <nav id="main-navigation" class="main-navigation" data-content-field="navigation-mainNav">
-  <ul>
+  <ul class="main-navigation-list">
     {.repeated section items}
 
-        <li class="{.section active} active-link{.end}{.if folderActive} active-folder{.end}">
+        <li class="main-navigation-item {.section active} active-link{.end}{.if folderActive} active-folder{.end}">
 
           {.folder?}
 
@@ -28,7 +27,7 @@
                   <!--EXTERNAL LINK IN A FOLDER-->
 
                   {.section externalLink}
-                    <li>
+                    <li class="main-navigation-dropdown">
                       <a href="{url}"{.section newWindow} target="_blank"{.end}>
                         {title}
                       </a>

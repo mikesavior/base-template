@@ -1,13 +1,21 @@
 
+
+
 /* CSS pre-processing by {less}. http://lesscss.org/
--------------------------------------------------*/
+***************************************************/
+
+
 
 /* Mobile first
--------------------------------------------------*/
+***************************************************/
 
 body {
   color: @bodyColor;
   .body-font;
+}
+
+a {
+  color: @linkColor;
 }
 
 .container {
@@ -16,7 +24,9 @@ body {
   padding: 100px 15px;
 }
 
-.header { }
+.header {
+
+}
 
 .site-title {
   a {
@@ -27,10 +37,14 @@ body {
 }
 
 .main-navigation {
-  ul {  
+
+}
+
+  .main-navigation-list {  
     padding-left: 0;
+  }
     
-    li {
+    .main-navigation-item {
       display: inline-block;
 
       a {
@@ -63,64 +77,42 @@ body {
         display: inline-block;
       }
     }
-  }
+
+.content {
+
 }
 
-a {
-  color: @linkColor;
+.footer {
+
 }
 
-.content { }
-
-.footer { }
 
 
 /* Homepage
------------------------------------------------*/
+***************************************************/
 
 .homepage { }
 
 
-/* Blog collection
------------------------------------------------*/
-
-.collection-type-blog {
-
-  /* Both pages 
-  ---------------------------------------------*/
-
-  /* List page
-  ---------------------------------------------*/
-
-  &.view-list { }
-
-  /* Item page
-  ---------------------------------------------*/  
-
-  &.view-item { }
-  
-}
-
 
 /* Break grid and stack blocks on small screens
------------------------------------------------*/
+***************************************************/
 
 @media screen and (max-width: 48em) {
-  .row .col {
-    width: 100%;
-    float: none;
-  }
+  @import 'sqs-grid-breaker';
 }
+
 
 
 /* Beyond mobile
------------------------------------------------*/
+***************************************************/
 
 @media screen and (min-width: 48em) { }
 
 
+
 /* Style Editor Tweaks
--------------------------------------------------*/
+***************************************************/
 
 /*
   These tweaks make up your site's style

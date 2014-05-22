@@ -26,7 +26,9 @@
           </h1>
           
           <!--Site tagline.-->
-          {.section siteTagLine}<p>{@}</p>{.end}
+          {.section siteTagLine}
+            <p class="site-tagline">{@}</p>
+          {.end}
 
         {.end}
 

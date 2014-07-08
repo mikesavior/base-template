@@ -1,25 +1,17 @@
 /*
+  Helpful Links
+  =============
 
-	Feel free to load up JQuery in your site.region.
-
-	We use YUI3 and you can, too. For JQuery developers,
-	a helpful guide to learning YUI3 can be found at:
-
+  https://yuilibrary.com/yui/docs/
 	http://www.jsrosettastone.com/
-
+  http://developers.squarespace.com/custom-javascript/
 */
 
-Y.use('node', function(Y) {
-	Y.on('domready', function() {
 
-		// Do stuff here.
-
-	});
+// Create a YUI sandbox on your page.
+YUI().use('node', 'event', function (Y) {
+  Y.on('domready', function () {
+    // The Node and Event modules are loaded and ready to use.
+    // Your code goes here!
+  });
 });
-
-/*
-
-	See the developer docs for JavaScript examples.
-	http://developers.squarespace.com/custom-javascript/
-
-*/

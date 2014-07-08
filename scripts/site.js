@@ -3,7 +3,7 @@
   =============
 
   https://yuilibrary.com/yui/docs/
-	http://www.jsrosettastone.com/
+  http://www.jsrosettastone.com/
   http://developers.squarespace.com/custom-javascript/
 */
 

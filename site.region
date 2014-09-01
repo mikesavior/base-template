@@ -37,9 +37,9 @@
       </header>
 
       <!--Content injection point.-->
-      <section id="content" class="content">
+      <main id="content" class="content" role="main">
        {squarespace.main-content}
-      </section>
+      </main>
 
       <!--Footer with open block field.-->
       <footer id="footer" class="footer">

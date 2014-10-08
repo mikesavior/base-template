@@ -23,7 +23,7 @@
 
   <!--WRAPPER-->
   
-  <article id="post-{id}" class="{@|item-classes}">
+  <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
     
     <!--MAIN IMAGE-->
 
@@ -35,7 +35,7 @@
 
     <!--POST TILE-->
 
-    <h1 class="title">
+    <h1 class="title" data-content-field="title">
       {.passthrough?}
         <a href="{sourceUrl}" target="_blank">{title}</a>
       {.or}

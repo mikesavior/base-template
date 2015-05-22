@@ -1,43 +1,37 @@
-/*
-  Create a new YUI instance and load the node
-  and event modules.
+/**
+ * A basic JavaScript file that refreshes the Squarespace ImageLoader. For more
+ * information about writing custom JavaScript on a Squarespace developer site
+ * visit the link below.
+ * @see http://developers.squarespace.com/custom-javascript/
+ *
+ * This script wrapped in a Immediately-Invoked Function Expression (IIFE) to
+ * prevent variables from leaking onto the global scope. For more information
+ * on IIFE visit the link below.
+ * @see http://en.wikipedia.org/wiki/Immediately-invoked_function_expression
+ */
+(function() {
+  'use strict';
 
-  HELPFUL LINKS
-  =============
+  // Stop the script if the user is on an old browser.
+  // Browser support: http://caniuse.com/#search=queryselectorall
+  if (!document.querySelectorAll) {
+    return;
+  }
 
-  http://yuilibrary.com/yui/docs/api/
-  http://www.jsrosettastone.com/
-*/
+  /**
+   * Loads all images on the page using Squarespace's Responsive ImageLoader.
+   *
+   * @method loadImages
+   * @see http://developers.squarespace.com/using-the-imageloader/
+   */
+  function loadAllImages() {
+    var images = document.querySelectorAll('img[data-src]' );
 
-YUI().use('node', 'event', 'squarespace-util', function (Y) {
-  Y.on('domready', function () {
-
-    /*
-      This function loads and refreshes images
-      using Squarespace's responsive ImageLoader.
-    */
-
-    function loadImages () {
-      Y.all('img[data-src]' ).each(function(img) {
-        ImageLoader.load(img);
-      });
+    for (var i = 0; i < images.length; i++) {
+      ImageLoader.load(images[i]);
     }
+  }
 
-    /*
-      ImageLoader will refresh images on windowresize
-      and any change in the Style Editor.
-    */
-
-    Y.one(window).on('resize', loadImages, this);
-    Y.Global && Y.Global.on('tweak:change', loadImages, this);    
-
-
-
-    /*
-      Author's custom code goes here.
-      =============================== */
-
-
-
-  });
-});
+  // The event subscription that reloads images on resize.
+  document.addEventListener('resize', loadAllImages);
+}());
